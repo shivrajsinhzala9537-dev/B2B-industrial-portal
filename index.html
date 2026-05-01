@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shiv Steel — Cost Calculator</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<section id="hero">
+  <div class="hero-content">
+    <p class="hero-tag">B2B Steel Supplier</p>
+    <h1>Shiv Steel</h1>
+    <p class="hero-sub">Premium steel products. Trusted by 1200+ businesses.</p>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">500+</span><span class="stat-lbl">Products</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">20+</span><span class="stat-lbl">Years</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">1200+</span><span class="stat-lbl">Clients</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="calculator">
+  <div class="section-header">
+    <h2>Steel Calculator</h2>
+    <p>Enter dimensions to get cost estimate.</p>
+    <div class="underline"></div>
+  </div>
+
+  <div class="card">
+    <div class="step-title">Choose Steel Grade</div>
+    <div class="material-grid">
+        <div class="mat-option" data-mat="SS 304" data-density="7900" data-rate="185" onclick="selectMat(this)">
+          <div class="mat-name">SS 304</div>
+          <div class="mat-desc">Stainless Steel</div>
+          <div class="mat-rate">₹ 185 / kg</div>
+        </div>
+        <div class="mat-option" data-mat="EN24" data-density="7860" data-rate="110" onclick="selectMat(this)">
+          <div class="mat-name">EN24</div>
+          <div class="mat-desc">Alloy Steel</div>
+          <div class="mat-rate">₹ 110 / kg</div>
+        </div>
+        <div class="mat-option" data-mat="Mild Steel" data-density="7850" data-rate="58" onclick="selectMat(this)">
+          <div class="mat-name">Mild Steel</div>
+          <div class="mat-desc">MS / IS 2062</div>
+          <div class="mat-rate">₹ 58 / kg</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="step-title">Choose Shape</div>
+      <div class="shape-grid">
+        <div class="shape-option" data-shape="rod" onclick="selectShape(this)">
+          <div class="shape-icon">●</div>
+          <div class="shape-name">Rod / Bar</div>
+          <div class="shape-desc">Diameter × Length</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="step-title">Dimensions &amp; Quantity</div>
+
+      <div id="rodF" class="dim-fields">
+        <div class="field-group">
+          <label id="lD">Diameter (mm)</label>
+          <input type="text" id="rD" placeholder="e.g. 25"/>
+        </div>
+        <div class="field-group">
+          <label id="lRL">Length (mm)</label>
+          <input type="text" id="rL" placeholder="e.g. 6000"/>
+        </div>
+      </div>
+
+      <div class="dim-fields">
+        <div class="field-group">
+          <label>Quantity</label>
+          <input type="text" id="qty" value="1" />
+        </div>
+      </div>
+
+      <button class="btn-calculate" onclick="calculate()">Calculate</button>
+    </div>
+
+    <div class="result-card" id="resultBox" style="display:none">
+      <h3 class="result-heading">Result</h3>
+      <div class="result-grid" id="resGrid"></div>
+      <p class="result-note" id="resNote"></p>
+    </div>
+
+  </section>
+
+<section id="contact">
+  <div class="section-header">
+    <h2>Contact</h2>
+    <div class="underline"></div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-item">
+      <div>
+        <div class="contact-label">Address</div>
+        <div class="contact-val">Plot No. 42, GIDC Vatva, Ahmedabad 382445</div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div>
+        <div class="contact-label">Phone</div>
+        <div class="contact-val">+91 79 2583 XXXX</div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div>
+        <div class="contact-label">Email</div>
+        <div class="contact-val">sales@shivsteel.in</div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div>
+        <div class="contact-label">Hours</div>
+        <div class="contact-val">Mon – Sat: 9 AM – 7 PM</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer></footer>
+  <script src="script.js"></script>
+</body>
+</html>
